@@ -10,6 +10,18 @@ cueva:str
 puntos:int = 0
 opcion_salir:str
 
+cadena:str = '''
+       \****__              ____                                              
+         |    *****\_      --/ *\-__                                          
+         /_          (_    ./ ,/----'                                         
+           \__         (_./  /                                                
+              \__           \___----^__                                       
+               _/   _                  \                                      
+        |    _/  __/ )\"\ _____         *\                                    
+        |\__/   /    ^ ^       \____      )                                   
+         \___--"                    \_____ )                                  
+                                          "
+'''
 while not(exit):
     for i in range(NUM_MAX_CUEVAS):
         if i == 0:
@@ -19,6 +31,8 @@ while not(exit):
             print("")
             time.sleep(1)
             print("                       COMIENZA EL JUEGO                       ")
+            print("")
+            print(cadena)
             print("")
             time.sleep(1)
             print(f"Te encuentras con 2 cuevas, una tiene un dragón bueno que\n"
@@ -43,6 +57,7 @@ while not(exit):
                 puntos+=CONST_PUNTOS
         else:
             print("Has introducido un caracter erroneo, el dragón te ha fulminado...\n")
+            break
 
     print(f"Has acabado con {puntos} puntos")
 
