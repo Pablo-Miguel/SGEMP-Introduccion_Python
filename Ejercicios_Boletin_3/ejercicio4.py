@@ -1,3 +1,5 @@
+print("CONVERTIDOR DE CAPITAL")
+
 print("Introduzca una cantidad en dólares:")
 dolares:float = float(input())
 

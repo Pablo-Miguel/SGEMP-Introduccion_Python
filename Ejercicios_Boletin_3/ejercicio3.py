@@ -1,4 +1,4 @@
-print("COMPROBADOR DE RIMAS");
+print("COMPROBADOR DE RIMAS")
 
 print("Introduzca la primera palabra:")
 cadena1: str = input()
