@@ -5,17 +5,18 @@ class Banco:
     def operar(self):
         print("Seleccione numero del cliente:")
         for pos, cli in enumerate(self.clientes):
-            print(f"Cliente {pos}: {cli.nombre}")
+            print(f"Cliente {pos + 1}: {cli.nombre}")
 
         opcion: int = int(input())
-        if self.clientes[opcion] != None:
-            cli: Cliente = self.clientes[opcion]
+        if self.clientes[opcion - 1] != None:
+            cli: Cliente = self.clientes[opcion - 1]
+            print(f"Bienvenido cliente {cli.nombre}.")
             operacion = input("Seleccione depositar -> d o extraer -> e: ")
             operacion.lower()
             if operacion.startswith("d"):
-                cli.depositar(float(input("Introduzca cantidad a depositar: ")))
+                cli.depositar()
             else:
-                cli.extraer(float(input("Introduzca cantidad a extraer: ")))
+                cli.extraer()
 
     def deposito_total(self):
         total = 0.0
@@ -30,12 +31,21 @@ class Cliente:
 
     def depositar(self):
         self.cantidad += round(float(input("Introduzca canitdad a depositar: ")), 2)
+        self.mostrar_total()
 
     def extraer(self):
         self.cantidad -= round(float(input("Introduzca canitdad a extraer: ")), 2)
+        self.mostrar_total()
 
     def mostrar_total(self):
         print(f"Saldo actual: {self.cantidad}€")
 
     def __str__(self):
         return f"Cliente: [Nombre: {self.nombre}, Cantidad: {self.cantidad}]"
+
+
+banco: Banco = Banco([Cliente("Pablo", 5000), Cliente("Marta", 2000), Cliente("Manu", 1000)])
+
+banco.deposito_total()
+banco.operar()
+banco.deposito_total()
