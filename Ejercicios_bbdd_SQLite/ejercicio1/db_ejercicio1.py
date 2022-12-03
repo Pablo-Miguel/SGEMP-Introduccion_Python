@@ -1,14 +1,5 @@
 from sqlite3 import *
 
-
-def conexion():
-    try:
-        bd = connect("db_ejercicio1.db")
-        return bd
-    except OperationalError as error:
-        print("Error al abrir:", error)
-
-
 def onCreate():
     try:
         bd = connect("db_ejercicio1.db")
@@ -58,6 +49,8 @@ def onCreate():
         print("Tablas creadas correctamente")
     except OperationalError as error:
         print("Error al abrir:", error)
+    finally:
+        cursor.close()
 
 
 def onCreateInsertData():
@@ -100,3 +93,5 @@ def onCreateInsertData():
         print("Datos insertados correctamente")
     except OperationalError as error:
         print("Error al abrir:", error)
+    finally:
+        cursor.close()

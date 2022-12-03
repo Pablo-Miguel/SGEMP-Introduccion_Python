@@ -172,7 +172,6 @@ def eliminarProfesor():
         cursor.close()
         print("Se ha eliminado el profesor correctamente")
     except OperationalError as error:
-        print("El profesor está asignado a una clase")
         print("Error al abrir:", error)
     finally:
         cursor.close()
