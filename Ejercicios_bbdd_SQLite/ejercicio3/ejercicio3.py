@@ -6,7 +6,7 @@ def diff_month(d1, d2):
 
 onCreate()
 
-EMPLEADOS = 1
+EMPLEADOS = 3
 PORCENTAJE_MES = 1
 PORCENTAJE_HIJO = 5
 IMPUESTO_SALUD = 7
