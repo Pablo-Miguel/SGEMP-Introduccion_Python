@@ -1,7 +1,7 @@
 from db_ejercicio2 import *
 
-# onCreate()
-# onCreateInsertData()
+onCreate()
+onCreateInsertData()
 
 DESPIDOS = 3
 AGREGAR = 8

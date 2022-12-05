@@ -1,8 +1,8 @@
 from db_ejercicio1 import *
 from sqlite3 import *
 
-# onCreate()
-# onCreateInsertData()
+onCreate()
+onCreateInsertData()
 
 print("Se quiere saber el curso escolar en el que cada alumno está matriculado de cada asignatura.")
 try:
@@ -176,8 +176,9 @@ def eliminarProfesor():
     finally:
         cursor.close()
 
-# insertarAlumno()
 
-# insertarProfesor()
+insertarAlumno()
 
-# eliminarProfesor()
+insertarProfesor()
+
+eliminarProfesor()
